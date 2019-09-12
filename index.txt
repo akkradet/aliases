@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Quick install: 'curl -s https://sandren.com/aliases | bash'
+# Quick install: 'curl -s https://git.io/Jem7i | bash'
 
 cd ~
-wget -q https://sandren.com/aliases/aliases.txt
+wget -q https://raw.githubusercontent.com/akkradet/aliases/master/aliases.txt
 sed -i '/^# START CUSTOM ALIASES/,/^# END CUSTOM ALIASES/d;' ~/.bashrc
 cat aliases.txt >> ~/.bashrc
 rm aliases.txt

@@ -1,6 +1,6 @@
 # START CUSTOM ALIASES
 
-# Quick install: 'curl -s https://sandren.com/aliases | bash'
+# Quick install: 'curl -s https://git.io/Jem7i | bash'
 
 # Directory aliases
 alias ..='cd ..'
