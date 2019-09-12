@@ -15,9 +15,8 @@ alias ls='ls -hF --color=auto --group-directories-first'
 alias la='ls -hFA --color=auto --group-directories-first'
 alias ll='ls -hFAl --color=auto --group-directories-first'
 
-# Apt aliases
-alias update='sudo apt update && sudo apt upgrade -y'
-alias autoremove='sudo apt autoremove --purge -y'
+alias sb='source ~/.bashrc'
+alias s='source'
 
 # Program aliases
 alias n='nano'
