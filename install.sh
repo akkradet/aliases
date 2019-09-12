@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Quick install: `curl -s https://git.io/Jem7i | bash`
+# Quick install: `curl -s https://git.io/Jem52 | bash`
 
 cd ~
 wget -q https://raw.githubusercontent.com/akkradet/aliases/master/aliases.txt
