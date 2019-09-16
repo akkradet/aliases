@@ -1,14 +1,11 @@
 # START CUSTOM ALIASES
 
-# Quick install: 'curl -s https://git.io/Jem7i | bash'
 
 # Directory aliases
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ws='cd /etc/nginx'
-alias wsc='cd /etc/nginx/conf.d'
-alias wr='cd /var/www'
+alias www='clear; cd /var/www/html/; ls'
 alias md='mkdir -p'
 alias rd='rmdir'
 alias ls='ls -hF --color=auto --group-directories-first'
@@ -41,13 +38,6 @@ alias pull='git pull'
 alias push='git push'
 alias reset='git reset'
 alias status='git status'
-
-# Tmux aliases
-alias tn='tmux new-session -s'
-alias ta='tmux attach-session -t'
-alias tr='tmux rename-session -t'
-alias tl='tmux list-sessions'
-alias tk='tmux kill-session -t'
 
 # System aliases
 alias service='sudo service'
