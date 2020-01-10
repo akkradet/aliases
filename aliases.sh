@@ -40,11 +40,13 @@ alias reset='git reset'
 alias status='git status'
 
 # System aliases
-alias service='sudo service'
-alias start='sudo systemctl start'
-alias reload='sudo systemctl reload'
-alias restart='sudo systemctl restart'
-alias stop='sudo systemctl stop'
+alias yum='yum -y'
+alias sc='systemctl'
+alias scd='sc disable'
+alias sce='sc enable'
+alias scr='sc restart'
+alias scs='sc status'
+alias scx='sc stop'
 
 # Miscellaneous aliases
 alias root='sudo -i'
