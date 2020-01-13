@@ -86,11 +86,17 @@ alias scr='sc restart'
 alias scs='sc status'
 alias scx='sc stop'
 
-# Miscellaneous aliases
+#Myiases
 alias root='sudo -i'
 alias fuck='sudo'
 alias fucking='sudo'
 alias c='clear'
 alias x='exit'
-
+alias h="history"
+alias sleep="sudo systemctl suspend"
+alias die="sudo shutdown -h now"
+alias kill='sudo kill -9'
+alias up="uptime"
+alias df='df -h'
+alias du='du -h'
 # END CUSTOM ALIASES
