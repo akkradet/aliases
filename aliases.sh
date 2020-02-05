@@ -1,5 +1,6 @@
 # START CUSTOM ALIASES
-
+# Author: akkradet  
+# Email: akkradet7@gmail.com.com
 
 # Directory aliases
 alias ..='cd ..'
@@ -14,6 +15,43 @@ alias ll='ls -hFAl --color=auto --group-directories-first'
 
 alias sb='source ~/.bashrc'
 alias s='source'
+
+# ------------------------------------
+# Docker alias and function
+# ------------------------------------
+alias d='docker'
+alias dm='docker image'
+alias dms='docker images'
+# Get latest container ID
+alias dl="docker ps -l -q"
+# Get container process
+alias dps="docker ps"
+# Get process included stop container
+alias dpsa="docker ps -a"
+# Get images
+alias di="docker images"
+# Get container IP
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+# Run deamonized container, e.g., $dkd base /bin/echo hello
+alias dkd="docker run -d -P"
+# Run interactive container, e.g., $dki base /bin/bash
+alias dki="docker run -i -t -P"
+# Execute interactive container, e.g., $dex base /bin/bash
+alias dex="docker exec -i -t"
+# Stop all containers
+dstop() { docker stop $(docker ps -a -q); }
+# Remove all containers
+drm() { docker rm $(docker ps -a -q); }
+# Stop and Remove all containers
+alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+# Remove all images
+dri() { docker rmi $(docker images -q); }
+# Dockerfile build, e.g., $dbu tcnksm/test 
+dbu() { docker build -t=$1 .; }
+# Show all alias related docker
+dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+# Bash into running container
+dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 
 # Program aliases
 alias n='nano'
@@ -40,16 +78,25 @@ alias reset='git reset'
 alias status='git status'
 
 # System aliases
-alias service='sudo service'
-alias start='sudo systemctl start'
-alias reload='sudo systemctl reload'
-alias restart='sudo systemctl restart'
-alias stop='sudo systemctl stop'
+alias yum='yum -y'
+alias sc='systemctl'
+alias scd='sc disable'
+alias sce='sc enable'
+alias scr='sc restart'
+alias scs='sc status'
+alias scx='sc stop'
 
-# Miscellaneous aliases
+#Myiases
 alias root='sudo -i'
 alias fuck='sudo'
 alias fucking='sudo'
 alias c='clear'
-
+alias x='exit'
+alias h="history"
+alias sleep="sudo systemctl suspend"
+alias die="sudo shutdown -h now"
+alias kill='sudo kill -9'
+alias up="uptime"
+alias df='df -h'
+alias du='du -h'
 # END CUSTOM ALIASES
